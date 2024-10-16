@@ -1,0 +1,436 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+}
+
+.navbar img {
+    width: 100px;
+
+}
+
+.hero {
+    width: 100%;
+    height: 70vh;
+}
+
+.hero img {
+    object-fit: cover;
+    object-position: center;
+    height: 70vh;
+
+}
+
+.hero ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+.carcap1 h1 {
+    font-size: 70px;
+    color: rgb(52, 113, 52);
+    font-family: carfont;
+}
+
+@font-face {
+    font-family: carfont;
+    src: url("NerkoOne-Regular.ttf");
+}
+
+.carcap1 {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(20%, -45%);
+    left: 50%;
+    text-align: center;
+}
+
+@media(max-width:992px) {
+    .carcap1 h1 {
+        font-size: 50px;
+    }
+}
+
+@media(max-width:768px) {
+    .carcap1 h1 {
+        font-size: 40px;
+    }
+}
+
+@media(max-width:576px) {
+    .carcap1 h1 {
+        font-size: 30px;
+    }
+}
+
+.carcap3 {
+
+    width: 50%;
+    position: absolute;
+    top: 50%;
+
+    transform: translate(-20%, -50%);
+}
+
+.carcap3 h1 {
+
+    color: rgb(52, 113, 52);
+    font-family: carfont;
+}
+
+.carcap3 img {
+    object-fit: cover;
+    object-position: center;
+    height: 30vh;
+    font-weight: 200;
+}
+
+.coursesscroll {
+    overflow: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+    padding: 15px 0;
+}
+
+.forscroll {
+    display: flex;
+    animation-name: scrolling;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.scrollitem {
+    flex: 0 0 auto;
+    display: inline-block;
+    width: 250px;
+    height: 300px;
+}
+
+.scrollitem img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 10px;
+}
+
+.scrollitem span {
+    position: absolute;
+    top: 0;
+    padding-left: 20px;
+    color: white;
+    font-size: 25px;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translate(0%);
+    }
+
+    100% {
+        transform: translate(-50%);
+    }
+}
+
+.background {
+    background-color: rgb(194, 233, 233);
+}
+
+.background i {
+    color: rgb(5, 89, 5);
+}
+
+.background h1 {
+    font-weight: 700;
+}
+
+.background h3 {
+    padding-left: 15px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.cards {
+    margin: auto;
+}
+
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.test {
+    overflow: hidden;
+    transition-duration: 1s;
+
+}
+
+.card-text {
+    opacity: 0;
+    transition-duration: 1s;
+}
+
+
+.test:hover .card-text {
+    transition: smooth;
+    transition-duration: 1s;
+    opacity: 1;
+    padding: 10px;
+}
+
+.card {
+    box-shadow: 1px 1px 10px 5px rgb(182, 180, 180);
+    transition-duration: 1s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px 5px rgb(106, 105, 105);
+}
+
+.cardpos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.card img {
+    margin: 0px;
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+}
+
+.card h3,
+.card p {
+    color: black;
+}
+
+.cardtot {
+    margin-bottom: 25px;
+}
+
+.card-footer {
+    border: 0px;
+}
+
+.why {
+    text-align: center;
+    /* background-color: bisque;*/
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.whymatter {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.whymatter p {
+    font-size: 20px;
+}
+
+.whymatter h1 {
+    font-weight: 700;
+}
+
+.whymatter h3 {
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+footer {
+    /* background-color: bisque; */
+    background-color: rgb(167, 247, 167);
+
+    padding: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.footflex {
+    display: flex;
+
+}
+
+.linksymbol li::before {
+    content: ">";
+    margin-right: 8px;
+    color: rgb(0, 102, 128);
+}
+
+.footer-bottom {
+    background-color: rgb(107, 238, 107);
+
+    padding-left: 110px;
+    padding-top: 15px;
+
+}
+
+.modal-body a {
+    text-decoration: none;
+}
+
+.privacy {
+    text-align: justify;
+}
+
+.bg_cover {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+[data-overlay] {
+    position: relative;
+}
+
+.page-banner-cont {
+    position: relative;
+}
+
+.bgimg {
+    background-image: url("assets/page-banner-1.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 18vh;
+
+}
+
+.aboutbg {
+    position: relative;
+}
+
+.bgmatter {
+    background-color: rgba(75, 221, 143, 0.697);
+    position: absolute;
+    height: 18vh;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 50px 15px;
+}
+
+.bgmatter li {
+    font-size: 20px;
+}
+
+.bgmatter li a {
+    text-decoration: none;
+}
+
+.aboutmatter {
+    width: 50%;
+    height: 80vh;
+    position: absolute;
+    top: 35vh;
+    left: 25px;
+}
+
+.aboutmatter p {
+    font-size: 25px;
+    width: 50%;
+}
+
+.bgabout {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.bgabout img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.mission {
+    padding: 30px 20px;
+}
+
+.missionmat {
+    padding-top: 80px;
+}
+
+.missionmat h3 {
+    font-weight: 400;
+}
+
+.missionimg {
+
+    overflow: hidden;
+
+}
+
+.missionimg img {
+    border-radius: 50%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media(max-width:768px) {
+    .aboutmatter p {
+        font-size: 20px;
+    }
+}
+
+@media(max-width:768px) {
+    .missionimg img {
+        margin-top: 100px;
+
+    }
+}
+
+.faq {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.faq p,
+.faq details,
+.faq summary {
+    font-size: 26px;
+}
+
+.faq h1 {
+    margin-bottom: 25px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.qn {
+    height: auto;
+    width: 60%;
+    background-color: rgb(197, 194, 194);
+    margin-left: 20%;
+    padding: 15px;
+}
+.filter {
+    filter: blur(3.5px);
+  }

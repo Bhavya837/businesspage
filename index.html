@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillconnect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+</head>
+<body>
+    <header class="container-fluid sticky-top bg-white "> 
+     <div class="navbar navbar-expand-sm p-0" data-bs-backdrop="static">
+        <img class="navbar-brand img-fluid ms-sm-2" src="assets/logo2.jpg" alt="">
+        <button class="navbar-toggler text-bg-light" data-bs-target="#navclose" data-bs-toggle="collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navclose">
+            <ul class="navbar-nav ms-sm-auto me-lg-5 ">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+            </ul>
+
+            <button class="btn text-bg-success me-sm-5" data-bs-toggle="modal" data-bs-target="#modalreg"> Sign up </button>
+        </div>
+      
+    </div>
+    </header>
+    <div class="modal  fade" id="modalreg" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="regform" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered  modalwidth" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="regform">Registration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">  
+                    <form action=""  onsubmit="return check()">
+                        <div class="form-floating mb-2">
+                            <input type="text"  name="Name" placeholder="Enter name" class="form-control" id="namevalid">
+                            <label for="" class="form-label">Enter name </label>
+                        </div>
+                        <p id="nameError" class="text-danger ml-20"></p>
+                        <div class="form-floating mb-2">
+                            <input type="email"  name="email" placeholder="Enter email" class="form-control" > 
+                            <label for="" class="form-label">Enter Email </label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input type="tel"  name="Phone num" placeholder="Enter Phone number" class="form-control" id="phnvalid">
+                            <label for="" class="form-label">Enter mobile number </label>
+                        </div>
+                        <p id="phnError" class="text-danger ml-20"></p>
+                        <select name="" id="" class="form-select mb-2">
+                            <option value="" hidden>Instructor/Learner</option>
+                            <option value="">Instructor</option>
+                            <option value="">Learner</option>
+                        </select>
+                        <button
+                            type="submit"
+                            class="btn btn-success form-control mb-2"
+                            id="btnvalid"
+                        >
+                            Submit
+                        </button>
+                        
+                    </form>
+                   <p class="text-end acolor">
+                    Have an account? <a href="#" data-bs-dismiss="modal" data-bs-target="#modallogin" data-bs-toggle="modal">login</a>
+                   </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="modal fade" id="modallogin" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="loginform" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modalwidth" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginform">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">  
+                    <form action="" method="post">
+                        <div class="form-floating mb-2">
+                            <input type="text"  name="Username" placeholder="Enter User Id" class="form-control">
+                            <label for="" class="form-label">Enter User Id</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input type="text"  name="password" placeholder="Enter password" class="form-control">
+                            <label for="" class="form-label">Enter password</label>
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn btn-success form-control mb-2"
+                        >
+                            Submit
+                        </button>
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div> 
+   
+<section class="hero">
+        <div id="carslide" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li 
+                    data-bs-target="#carslide"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="First slide"
+                ></li>
+                <li
+                    data-bs-target="#carslide"
+                    data-bs-slide-to="1"
+                    aria-label="Second slide"
+                ></li>
+                <li
+                    data-bs-target="#carslide"
+                    data-bs-slide-to="2"
+                    aria-label="Third slide"
+                ></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+            
+                    <img
+                        src="assets/car1(2).jpg"
+                        class="w-100 d-block"
+                        alt="First slide"
+                    />
+                    <div class="carousel-caption  carcap1">
+                        <h1>Share What You Know, Learn What You Love.</h1>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img 
+                        src="assets/car3(3).jpg"
+                        class="w-100 d-block"
+                        alt="Second slide"
+                    />
+                    <div class="carousel-caption carcap3">
+                        <h1>Connect with verified mentors and learners and exchange skills effortlessly.</h1>
+                        <span style="color: rgb(64, 237, 180); font-size: 90px;"><i class="bi bi-patch-check-fill"></i></span>
+                    </div>
+                
+                </div>
+                <div class="carousel-item">
+                    <img
+                    src="assets/car2.jpg"
+                        class="w-100 d-block"
+                        alt="Third slide"
+                    />
+                    <div class="carousel-caption carcap3">
+                        <h1>Utilize our unique barter system to exchange courses with other users.</h1>
+                        <img src="assets/barter.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carslide"
+                data-bs-slide="prev"
+            >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carslide"
+                data-bs-slide="next"
+            >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+    </section>  
+    <section class="coursesscroll container-fluid p-0 mt-1">
+        <div class="forscroll">
+            <div class="scrollitem">
+                <img src="assets/scroll1.jpg" alt="">
+                <span>Photography</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll2.jpg" alt="">
+                <span>UI/UX</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll3.jpg" alt="">
+                <span>Web designing</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll4.jpg" alt="">
+                <span>Animation</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll5.jpg" alt="">
+                <span>Painting</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll6.jpg" alt="">
+                <span>Mindfulness</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll9(sing).jpg" alt="">
+                <span>Communication skills</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll7.jpg" alt="">
+                <span>Cooking</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll8.jpg" alt="">
+                <span>Dancing</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll1.jpg" alt="">
+                <span>Photography</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll2.jpg" alt="">
+                <span>UI/UX</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll3.jpg" alt="">
+                <span>Web desgining</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll4.jpg" alt="">
+                <span>Animation</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll5.jpg" alt="">
+                <span>Painting</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll6.jpg" alt="">
+                <span>Mindfulness</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll9(sing).jpg" alt="">
+                <span>Communication skills</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll7.jpg" alt="">
+                <span>Cooking</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll8.jpg" alt="">
+                <span>Dancing</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll1.jpg" alt="">
+                <span>Photography</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll2.jpg" alt="">
+                <span>UI/UX</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll3.jpg" alt="">
+                <span>Web desgining</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll4.jpg" alt="">
+                <span>Animation</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll5.jpg" alt="">
+                <span>Painting</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll6.jpg" alt="">
+                <span>Mindfulness</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll9(sing).jpg" alt="">
+                <span>Communication skills</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll7.jpg" alt="">
+                <span>Cooking</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll8.jpg" alt="">
+                <span>Dancing</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll1.jpg" alt="">
+                <span>Photography</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll2.jpg" alt="">
+                <span>UI/UX</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll3.jpg" alt="">
+                <span>Web desgining</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll4.jpg" alt="">
+                <span>Animation</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll5.jpg" alt="">
+                <span>Painting</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll6.jpg" alt="">
+                <span>Mindfulness</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll9(sing).jpg" alt="">
+                <span>Communication skills</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll7.jpg" alt="">
+                <span>Cooking</span>
+            </div>
+            <div class="scrollitem">
+                <img src="assets/scroll8.jpg" alt="">
+                <span>Dancing</span>
+            </div>
+            
+        </div>
+    </section>  
+    <section class="container-fluid background mb-0">
+        <div class="row container pt-5">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-3">
+                <h1>Creative Learning Made Easy</h1>
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex mb-3">
+                    <h3><i class="bi bi-check-circle-fill"></i></h3>
+                    <div>
+                        <h3>Thousands of creative classes. Beginner to pro.</h3>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <h3><i class="bi bi-check-circle-fill"></i></h3>
+                    <div>
+                        <h3>Taught by creative pros and industry icons.</h3>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <h3><i class="bi bi-check-circle-fill"></i></h3>
+                    <div>
+                        <h3>Learning Paths to help you achieve your goals.</h3>
+                    </div>
+                </div>
+                <div class="d-flex mb-5">
+                    <h3><i class="bi bi-check-circle-fill"></i></h3>
+                    <div>
+                        <h3>Certificates to celebrate your accomplishments.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-75 cards">
+            <div class="row">
+                <div class=" col-sm-6 col-md-4 col-lg-3 cardtot ">
+                    <div class="card test">
+                        <div class="card-body forcardbg p-0">
+                            <svg role="img" aria-label="Flag">
+                                <filter id="blur">
+                                  <feGaussianBlur stdDeviation="3.5" edgeMode="duplicate" />
+                                </filter>
+                                  <image src="assets/7card.jpg" alt="">
+                              </svg>
+                            <img src="assets/7card.jpg" alt="">
+                            <div class="cardpos p-1">
+                                <h3 class="card-title pt-2">Innovating Education through AI</h3>
+                                <p class="card-text">Explore how AI is transforming the educational landscape, enhancing personalized learning experiences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 cardtot">
+                    <div class="card test">
+                        <div class="card-body p-0">
+                            <img src="assets/card3.jpg" alt="">
+                            <div class="cardpos p-1">
+                                <h3  class="card-title pt-2 ">Trusted Feedback from Peers</h3>
+                                <p  class="card-text">Our platform only accepts reviews from verified users, ensuring that every review you read is from someone who has actively participated in the course.</p>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 cardtot">
+                    <div class="card test">
+                        <div class="card-body p-0">
+                            <img src="assets/card6.jpg" alt="">
+                            <div class="cardpos p-1">
+                                <h3 class="card-title pt-2">Barter System: Skill Exchange</h3>
+                                <p class="card-text">Engage in a cost-free exchange of skills and knowledge with other learners, making education accessible to all.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 cardtot">
+                    <div class="card test">
+                        <div class="card-body p-0">
+                            <img src="assets/6card.jpg" alt="">
+                            <div class="cardpos p-1">
+                                <h3 class="card-title pt-2">Empowering Creative Minds</h3>
+                                <p class="card-text"> Discover tools and resources designed to foster creativity in learners of all ages.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 cardtot">
+                    <div class="card test">
+                        <div class="card-body p-0">
+                            <img src="assets/card4.jpg" alt="">
+                            <div class="cardpos p-1">
+                                <h3 class="card-title pt-2">The Future of Skill Sharing</h3>
+                                <p class="card-text">Insights into the evolving world of skill-sharing platforms and their role in global learning.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 cardtot">
+                    <div class="card test">
+                        <div class="card-body p-0">
+                            <img src="assets/card5.jpg" alt="">
+                            <div class="cardpos p-1">
+                                <h3 class="card-title pt-2">Advancing Career Development</h3>
+                                <p class="card-text">A guide to leveraging online courses for career advancement in a digital world.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 cardtot">
+                    <div class="card test">
+                        <div class="card-body p-0">
+                            <img src="assets/8card.jpg" alt="">
+                            <div class="cardpos p-1">
+                                <h3 class="card-title pt-2">"Sustainable Learning Models</h3>
+                                <p class="card-text"> An analysis of sustainable education practices that are shaping the future of learning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 cardtot">
+                    <div class="card test">
+                        <div class="card-body p-0">
+                            <img src="assets/5card.jpg" alt="">
+                            <div class="cardpos p-1">
+                                <h3 class="card-title pt-2">Innovating Sustainability Practices"</h3>
+                                <p class="card-text">Discover innovative approaches to sustainability that are driving change in industries worldwide, with a focus on eco-friendly solutions and practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section> 
+    <section class="bg-light pb-5 mt-0 ">
+        <section class="why container ">
+            <div class="whymatter w-50 mt-0">
+            <h1>Why Learners Love Our Platform</h1>
+            <p>Whether it's mastering a new programming language or perfecting a design technique, our platform is here to guide you every step of the way in your learning journey.
+    
+            </p>
+            <h3>
+                "The course quality and the community interaction make it all worthwhile. The platform offers real value and growth opportunities."
+            </h3>
+            <div class="whyname ">
+                <p>— Nanidni Devi, Verified Learner</p>
+            </div>
+            <h3>
+                "I appreciate that it's okay not to be perfect. This platform is a safe space to develop my skills and continue progressing."
+            </h3>
+            <div class="whyname ">
+                <p>— Srivani Ch, Enthusiastic Learner</p>
+            </div>
+          </div>
+        </section>
+    </section> 
+    
+    <footer class= "p-0 pt-5 ">
+        <div class="footer-top pt-20 pb-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-about mt-20">
+                            <h4>SkillConnect</h4>
+                            <p class="mt-10">Skill-Sharing Platform is a community-driven space where experts share their knowledge and learners gain new skills, all through a seamless, fee-free exchange.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-link mt-20">
+                            <h4 class="mb-10">Quick Links</h4>
+                            <ul class="mt-10 linksymbol">
+                                <li><a href="about.html">About</a></li>  
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#modalreg">Registration</a></li>  
+                                <li><a href="about.html#faqsec">FAQs</a></li>
+                                <li><a href="mailto:support@skillsharingplatform.com">Contact Us</a></li>                                
+                                <li><a href="privacypolicy.html">Privacy policy</a></li>
+                            </ul>
+                            
+                        </div> 
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-address mt-20 ">
+                            <h4>Contact Us</h4>
+                            <ul class="mt-30 ">
+                                <li class="footflex mb-3 mt-2">
+                                    <div class="icon">
+                                        <i class="bi bi-telephone-fill text-success"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <a href="tel:+1234567890">+123-456-7890</a>
+
+                                    </div>
+                                </li>
+                                <li class="footflex">
+                                    <div class="icon">
+                                        <i class="bi bi-envelope-fill text-success pe-1"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <a href="mailto:support@skillsharingplatform.com">support@skillsharingplatform.com</a>
+
+                                    </div>
+                                </li>
+                            </ul>
+							
+
+                        </div> 
+                    </div>
+                </div> 
+            </div> 
+        </div>
+        <div class="footer-bottom m-0 ">
+            <div class="row m-0">
+                <div class="col-md-5">
+                    <p>&copy;Copyrights 2023 @ SkillConnect </p>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-4">
+                    Designed by Bhavya M
+                </div>
+
+            </div>
+        </div>
+    </footer> 
+    <script src="validate.js"></script>
+    
+</body>
+</html>
